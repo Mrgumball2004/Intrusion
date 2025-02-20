@@ -1,0 +1,7 @@
+{
+  "name": "it36prelim",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
