@@ -2,6 +2,7 @@ import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 const Dashboard: React.FC = () => {
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
   return (
     <IonPage>
       <IonHeader>
@@ -10,8 +11,8 @@ const Dashboard: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <h1>Welcome to the Dashboard!</h1>
-        <p>You are authenticated.</p>
+        <h1>Welcome, {user.email}!</h1>
+        <p>You are now logged in.</p>
       </IonContent>
     </IonPage>
   );

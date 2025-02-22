@@ -1,27 +1,18 @@
-const express = require('express');
-const mysql = require('mysql2');
-const bcrypt = require('bcryptjs');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import express from 'express';
+import mysql from 'mysql2/promise'; // Use mysql2/promise for async/await support
+import bcrypt from 'bcryptjs';
+import cors from 'cors';
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json()); // Use express.json() instead of body-parser
 
 // MySQL connection
-const db = mysql.createConnection({
+const db = mysql.createPool({
   host: 'localhost', // MySQL host
   user: 'root',      // MySQL username
-  password: 'your_root_password', // MySQL password (set during installation)
+  password: '', // MySQL password (set during installation)
   database: 'user_auth',
-});
-
-db.connect((err) => {
-  if (err) {
-    console.error('Error connecting to MySQL:', err);
-    return;
-  }
-  console.log('Connected to MySQL database');
 });
 
 // Sign-up endpoint
@@ -33,18 +24,21 @@ app.post('/signup', async (req, res) => {
     return res.status(400).json({ message: 'Email and password are required' });
   }
 
-  // Hash the password
-  const hashedPassword = await bcrypt.hash(password, 10);
+  try {
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-  // Insert user into the database
-  const query = 'INSERT INTO users (email, password) VALUES (?, ?)';
-  db.query(query, [email, hashedPassword], (err, result) => {
-    if (err) {
-      console.error('Error signing up:', err);
-      return res.status(500).json({ message: 'Sign-up failed' });
-    }
+    // Insert user into the database
+    const [result] = await db.query(
+      'INSERT INTO users (email, password) VALUES (?, ?)',
+      [email, hashedPassword]
+    );
+
     res.status(201).json({ message: 'User registered successfully' });
-  });
+  } catch (err) {
+    console.error('Error signing up:', err);
+    res.status(500).json({ message: 'Sign-up failed' });
+  }
 });
 
 // Login endpoint
@@ -56,13 +50,9 @@ app.post('/login', async (req, res) => {
     return res.status(400).json({ message: 'Email and password are required' });
   }
 
-  // Find user by email
-  const query = 'SELECT * FROM users WHERE email = ?';
-  db.query(query, [email], async (err, results) => {
-    if (err) {
-      console.error('Error logging in:', err);
-      return res.status(500).json({ message: 'Login failed' });
-    }
+  try {
+    // Find user by email
+    const [results] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
 
     if (results.length === 0) {
       return res.status(401).json({ message: 'Invalid email or password' });
@@ -77,7 +67,10 @@ app.post('/login', async (req, res) => {
 
     // Return success (in a real app, you'd return a JWT token)
     res.status(200).json({ message: 'Login successful', user: { id: user.id, email: user.email } });
-  });
+  } catch (err) {
+    console.error('Error logging in:', err);
+    res.status(500).json({ message: 'Login failed' });
+  }
 });
 
 // Start the server

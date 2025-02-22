@@ -25,42 +25,36 @@ const Home: React.FC = () => {
   const history = useHistory();
 
   const handleAuth = async () => {
-    console.log('Email:', email);
-    console.log('Password:', password);
-
     // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      console.log('Email validation failed');
       setErrorMessage('Please enter a valid email address.');
       return;
     }
-
+  
     // Validate password (at least 6 characters)
-    if (!validator.isLength(password, { min: 6 })) {
-      console.log('Password validation failed');
+    if (password.length < 6) {
       setErrorMessage('Password must be at least 6 characters long.');
       return;
     }
-
+  
     // Determine if it's a login or sign-up request
-    const endpoint = isLogin ? 'login' : 'register';
-    const url = `https://reqres.in/api/${endpoint}`;
-
+    const endpoint = isLogin ? 'login' : 'signup';
+    const url = `http://localhost:5000/${endpoint}`;
+  
     try {
       const response = await axios.post(url, {
         email: email,
         password: password,
       });
-
+  
       console.log(`${isLogin ? 'Login' : 'Sign-up'} successful!`, response.data);
       setErrorMessage('');
-
-      // Save the token (e.g., in localStorage or state)
-      const token = response.data.token;
-      localStorage.setItem('token', token);
-      console.log('Token saved:', token);
-
+  
+      // Save user data (e.g., in localStorage or state)
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      console.log('User data saved:', response.data.user);
+  
       // Redirect to the Dashboard
       history.push('/dashboard');
     } catch (error) {
