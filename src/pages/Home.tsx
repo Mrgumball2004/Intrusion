@@ -25,14 +25,12 @@ const Home: React.FC = () => {
   const history = useHistory();
 
   const handleAuth = async () => {
-    // Validate email
+    // Validate email and password
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setErrorMessage('Please enter a valid email address.');
       return;
     }
-  
-    // Validate password (at least 6 characters)
     if (password.length < 6) {
       setErrorMessage('Password must be at least 6 characters long.');
       return;
@@ -49,14 +47,20 @@ const Home: React.FC = () => {
       });
   
       console.log(`${isLogin ? 'Login' : 'Sign-up'} successful!`, response.data);
-      setErrorMessage('');
   
-      // Save user data (e.g., in localStorage or state)
-      localStorage.setItem('user', JSON.stringify(response.data.user));
-      console.log('User data saved:', response.data.user);
+      // Display success message
+      setErrorMessage(`${isLogin ? 'Login' : 'Sign-up'} successful!`);
   
-      // Redirect to the Dashboard
-      history.push('/dashboard');
+      // Save user data to localStorage
+      if (response.data.user) {
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+        console.log('User data saved:', response.data.user);
+      }
+  
+      // Wait for 2 seconds before redirecting to the Dashboard
+      setTimeout(() => {
+        history.push('/dashboard');
+      }, 2000); // 2-second delay
     } catch (error) {
       console.error(`${isLogin ? 'Login' : 'Sign-up'} failed:`, error);
       setErrorMessage(
@@ -115,12 +119,12 @@ const Home: React.FC = () => {
 
         {/* Error Message Alert */}
         <IonAlert
-          isOpen={!!errorMessage}
-          onDidDismiss={() => setErrorMessage('')}
-          header="Error"
-          message={errorMessage}
-          buttons={['OK']}
-        />
+  isOpen={!!errorMessage}
+  onDidDismiss={() => setErrorMessage('')}
+  header={errorMessage.includes('success') ? 'Success' : 'Error'}
+  message={errorMessage}
+  buttons={['OK']}
+/>
       </IonContent>
     </IonPage>
   );

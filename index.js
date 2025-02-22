@@ -34,7 +34,11 @@ app.post('/signup', async (req, res) => {
       [email, hashedPassword]
     );
 
-    res.status(201).json({ message: 'User registered successfully' });
+    // Return success message and user data
+    res.status(201).json({
+      message: 'User registered successfully',
+      user: { id: result.insertId, email: email }, // Include user data in the response
+    });
   } catch (err) {
     console.error('Error signing up:', err);
     res.status(500).json({ message: 'Sign-up failed' });
