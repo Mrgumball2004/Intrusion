@@ -2,17 +2,19 @@ import express from 'express';
 import mysql from 'mysql2/promise'; // Use mysql2/promise for async/await support
 import bcrypt from 'bcryptjs';
 import cors from 'cors';
-import logger from './logger.js';
+import logger from './logger.js'; // Import the logger
+import { globalLimiter, loginLimiter } from './middleware/rateLimit.js'; // Import rate limiters
 
 const app = express();
 app.use(cors());
 app.use(express.json()); // Use express.json() instead of body-parser
+app.use(globalLimiter); // Apply global rate limiter to all routes
 
 // MySQL connection
 const db = mysql.createPool({
   host: 'localhost', // MySQL host
   user: 'root',      // MySQL username
-  password: '', // MySQL password (set during installation)
+  password: '',      // MySQL password (set during installation)
   database: 'user_auth',
 });
 
@@ -51,13 +53,14 @@ app.post('/signup', async (req, res) => {
     // Return success
     res.status(201).json({ message: 'User registered successfully' });
   } catch (err) {
-    console.error('Error signing up:', err);
+    // Log the error
+    logger.error(`Error signing up: ${err.message}`);
     res.status(500).json({ message: 'Sign-up failed' });
   }
 });
 
-// Login endpoint
-app.post('/login', async (req, res) => {
+// Login endpoint with rate limiting
+app.post('/login', loginLimiter, async (req, res) => {
   const { email, password } = req.body;
 
   // Validate input
@@ -92,7 +95,8 @@ app.post('/login', async (req, res) => {
     // Return success
     res.status(200).json({ message: 'Login successful', user: { id: user.id, email: user.email } });
   } catch (err) {
-    console.error('Error logging in:', err);
+    // Log the error
+    logger.error(`Error logging in: ${err.message}`);
     res.status(500).json({ message: 'Login failed' });
   }
 });
@@ -100,5 +104,5 @@ app.post('/login', async (req, res) => {
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  logger.info(`Server running on http://localhost:${PORT}`);
 });
