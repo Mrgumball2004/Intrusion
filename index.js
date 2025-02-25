@@ -2,7 +2,7 @@ import express from 'express';
 import mysql from 'mysql2/promise'; // Use mysql2/promise for async/await support
 import bcrypt from 'bcryptjs';
 import cors from 'cors';
-import logger from './logger';
+import logger from './logger.js';
 
 const app = express();
 app.use(cors());
