@@ -21,6 +21,7 @@ const ChangePassword: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertHeader, setAlertHeader] = useState('');
   const [alertMessage, setAlertMessage] = useState('');
+  const [shouldRedirect, setShouldRedirect] = useState(false); // New state for redirect
   const history = useHistory();
 
   const handleChangePassword = async () => {
@@ -35,7 +36,7 @@ const ChangePassword: React.FC = () => {
       setAlertHeader('Success');
       setAlertMessage(response.data.message);
       setShowAlert(true);
-      history.push('/login'); // Redirect to login page
+      setShouldRedirect(true); // Set redirect flag
     } catch (error) {
       if (error instanceof AxiosError) {
         setAlertMessage(error.response?.data?.message || 'Failed to change password');
@@ -44,6 +45,7 @@ const ChangePassword: React.FC = () => {
       }
       setAlertHeader('Error');
       setShowAlert(true);
+      setShouldRedirect(false); // No redirect on error
     }
   };
 
@@ -88,7 +90,12 @@ const ChangePassword: React.FC = () => {
 
         <IonAlert
           isOpen={showAlert}
-          onDidDismiss={() => setShowAlert(false)}
+          onDidDismiss={() => {
+            setShowAlert(false);
+            if (shouldRedirect) {
+              history.push('/home'); // Redirect after alert is dismissed
+            }
+          }}
           header={alertHeader}
           message={alertMessage}
           buttons={['OK']}
