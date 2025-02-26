@@ -101,6 +101,47 @@ app.post('/login', loginLimiter, async (req, res) => {
   }
 });
 
+app.post('/change-password', async (req, res) => {
+  const { email, oldPassword, newPassword } = req.body;
+
+  // Validate input
+  if (!email || !oldPassword || !newPassword) {
+    return res.status(400).json({ message: 'Email, old password, and new password are required' });
+  }
+
+  try {
+    // Find the user by email
+    const [results] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
+
+    if (results.length === 0) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const user = results[0];
+
+    // Verify the old password
+    const isPasswordValid = await bcrypt.compare(oldPassword, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid old password' });
+    }
+
+    // Hash the new password
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+
+    // Update the password in the database
+    await db.query('UPDATE users SET password = ? WHERE email = ?', [hashedNewPassword, email]);
+
+    // Log the password change
+    logger.info(`Password changed - User ID: ${user.id}, Email: ${email}, IP: ${req.ip}, User-Agent: ${req.headers['user-agent']}`);
+
+    // Return success
+    res.status(200).json({ message: 'Password changed successfully' });
+  } catch (err) {
+    logger.error(`Error changing password: ${err.message}`);
+    res.status(500).json({ message: 'Failed to change password' });
+  }
+});
+
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {

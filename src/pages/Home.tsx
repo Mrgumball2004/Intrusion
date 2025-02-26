@@ -125,6 +125,11 @@ const Home: React.FC = () => {
   message={errorMessage}
   buttons={['OK']}
 />
+
+        <IonButton expand="full" onClick={() => history.push('/change-password')}>
+          Change Password
+        </IonButton>
+
       </IonContent>
     </IonPage>
   );
