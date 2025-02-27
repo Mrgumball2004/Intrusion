@@ -10,9 +10,15 @@ import {
   IonItem,
   IonLabel,
   IonAlert,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonIcon,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
+import { lockClosed, mail, key } from 'ionicons/icons'; // Import icons
+import './ChangePassword.css'; // Import custom CSS
 
 const ChangePassword: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -21,7 +27,7 @@ const ChangePassword: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertHeader, setAlertHeader] = useState('');
   const [alertMessage, setAlertMessage] = useState('');
-  const [shouldRedirect, setShouldRedirect] = useState(false); // New state for redirect
+  const [shouldRedirect, setShouldRedirect] = useState(false);
   const history = useHistory();
 
   const handleChangePassword = async () => {
@@ -36,7 +42,7 @@ const ChangePassword: React.FC = () => {
       setAlertHeader('Success');
       setAlertMessage(response.data.message);
       setShowAlert(true);
-      setShouldRedirect(true); // Set redirect flag
+      setShouldRedirect(true);
     } catch (error) {
       if (error instanceof AxiosError) {
         setAlertMessage(error.response?.data?.message || 'Failed to change password');
@@ -45,55 +51,73 @@ const ChangePassword: React.FC = () => {
       }
       setAlertHeader('Error');
       setShowAlert(true);
-      setShouldRedirect(false); // No redirect on error
+      setShouldRedirect(false);
     }
   };
 
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="primary">
           <IonTitle>Change Password</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
-        <IonItem>
-          <IonLabel position="floating">Email</IonLabel>
-          <IonInput
-            type="email"
-            value={email}
-            onIonChange={(e) => setEmail(e.detail.value!)}
-          />
-        </IonItem>
+      <IonContent className="ion-padding change-password-content">
+        <IonGrid>
+          <IonRow className="ion-justify-content-center">
+            <IonCol size="12" sizeMd="8" sizeLg="6">
+              <div className="form-container">
+                <IonItem>
+                  <IonLabel position="floating">
+                    <IonIcon icon={mail} className="input-icon" /> Email
+                  </IonLabel>
+                  <IonInput
+                    type="email"
+                    value={email}
+                    onIonChange={(e) => setEmail(e.detail.value!)}
+                  />
+                </IonItem>
 
-        <IonItem>
-          <IonLabel position="floating">Old Password</IonLabel>
-          <IonInput
-            type="password"
-            value={oldPassword}
-            onIonChange={(e) => setOldPassword(e.detail.value!)}
-          />
-        </IonItem>
+                <IonItem>
+                  <IonLabel position="floating">
+                    <IonIcon icon={lockClosed} className="input-icon" /> Old Password
+                  </IonLabel>
+                  <IonInput
+                    type="password"
+                    value={oldPassword}
+                    onIonChange={(e) => setOldPassword(e.detail.value!)}
+                  />
+                </IonItem>
 
-        <IonItem>
-          <IonLabel position="floating">New Password</IonLabel>
-          <IonInput
-            type="password"
-            value={newPassword}
-            onIonChange={(e) => setNewPassword(e.detail.value!)}
-          />
-        </IonItem>
+                <IonItem>
+                  <IonLabel position="floating">
+                    <IonIcon icon={key} className="input-icon" /> New Password
+                  </IonLabel>
+                  <IonInput
+                    type="password"
+                    value={newPassword}
+                    onIonChange={(e) => setNewPassword(e.detail.value!)}
+                  />
+                </IonItem>
 
-        <IonButton expand="full" onClick={handleChangePassword}>
-          Change Password
-        </IonButton>
+                <IonButton
+                  expand="full"
+                  onClick={handleChangePassword}
+                  className="change-password-button"
+                >
+                  Change Password
+                </IonButton>
+              </div>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
 
         <IonAlert
           isOpen={showAlert}
           onDidDismiss={() => {
             setShowAlert(false);
             if (shouldRedirect) {
-              history.push('/home'); // Redirect after alert is dismissed
+              history.push('/login');
             }
           }}
           header={alertHeader}
