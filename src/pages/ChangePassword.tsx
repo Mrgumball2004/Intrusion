@@ -14,6 +14,8 @@ import {
   IonRow,
   IonCol,
   IonIcon,
+  IonBackButton,
+  IonButtons,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
@@ -58,7 +60,10 @@ const ChangePassword: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="primary">
+        <IonToolbar>
+            <IonButtons slot='start'>
+                <IonBackButton defaultHref='/home'></IonBackButton>
+            </IonButtons>
           <IonTitle>Change Password</IonTitle>
         </IonToolbar>
       </IonHeader>
