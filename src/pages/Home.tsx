@@ -23,6 +23,7 @@ const Home: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [isLogin, setIsLogin] = useState(true); // Toggle between login and sign-up
   const [lockoutTime, setLockoutTime] = useState<number | null>(null); // Lockout time in seconds
+  const [loginAttempts, setLoginAttempts] = useState(0); // Track login attempts
   const history = useHistory();
 
   useEffect(() => {
@@ -74,13 +75,20 @@ const Home: React.FC = () => {
     } catch (error) {
       if (axios.isAxiosError(error) && error.response && error.response.status === 429) {
         setErrorMessage('Too many login attempts, please try again later.');
-        setLockoutTime(15); // Set lockout time to 15 seconds
+        setLockoutTime(15); // Set lockout time to 60 seconds
       } else {
-        setErrorMessage(
-          isLogin
-            ? 'Invalid email or password. Please try again.'
-            : 'Sign-up failed. Please try again.'
-        );
+        setLoginAttempts((prevAttempts) => prevAttempts + 1);
+        if (loginAttempts >= 4) {
+          setErrorMessage('Too many login attempts, please wait 1 minute before trying again.');
+          setLockoutTime(15); // Set lockout time to 60 seconds
+          setLoginAttempts(0); // Reset login attempts
+        } else {
+          setErrorMessage(
+            isLogin
+              ? 'Invalid email or password. Please try again.'
+              : 'Sign-up failed. Please try again.'
+          );
+        }
       }
     }
   };
@@ -129,6 +137,14 @@ const Home: React.FC = () => {
         {/* Login/Sign Up Button */}
         <IonButton expand="full" onClick={handleAuth} disabled={lockoutTime !== null && lockoutTime > 0}>
           {isLogin ? 'Login' : 'Sign Up'}
+        </IonButton>
+
+        {/* Change Password Button */}
+        <IonButton
+          expand="full"
+          onClick={() => history.push('/change-password')}
+        >
+          Change Password
         </IonButton>
 
         {/* Error Message Alert */}
