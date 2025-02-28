@@ -14,7 +14,7 @@ import {
   IonRow,
   IonCol,
   IonIcon,
-  IonBackButton,
+    IonBackButton,
   IonButtons,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
@@ -52,7 +52,7 @@ const ChangePassword: React.FC = () => {
         setAlertMessage('Failed to change password');
       }
       setAlertHeader('Error');
-      setShowAlert(true);
+      setShowAlert(true); 
       setShouldRedirect(false);
     }
   };
@@ -60,13 +60,16 @@ const ChangePassword: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+       <IonToolbar>
             <IonButtons slot='start'>
                 <IonBackButton defaultHref='/home'></IonBackButton>
             </IonButtons>
           <IonTitle>Change Password</IonTitle>
         </IonToolbar>
-      </IonHeader>
+        
+
+
+      </IonHeader>  
       <IonContent className="ion-padding change-password-content">
         <IonGrid>
           <IonRow className="ion-justify-content-center">
@@ -93,7 +96,7 @@ const ChangePassword: React.FC = () => {
                     onIonChange={(e) => setOldPassword(e.detail.value!)}
                   />
                 </IonItem>
-
+       
                 <IonItem>
                   <IonLabel position="floating">
                     <IonIcon icon={key} className="input-icon" /> New Password
@@ -122,7 +125,7 @@ const ChangePassword: React.FC = () => {
           onDidDismiss={() => {
             setShowAlert(false);
             if (shouldRedirect) {
-              history.push('/login');
+              history.push('/Home');
             }
           }}
           header={alertHeader}
