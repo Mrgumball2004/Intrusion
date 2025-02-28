@@ -1,0 +1,7 @@
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-26T12:13:16.783Z"}
+{"level":"error","message":"Error signing up: Unknown database 'user_auth'","timestamp":"2025-02-26T12:15:49.857Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-26T12:22:02.056Z"}
+{"level":"info","message":"Successful sign-up - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-26T12:23:28.413Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-26T12:23:47.000Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-26T12:40:41.056Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-26T12:41:35.455Z"}
