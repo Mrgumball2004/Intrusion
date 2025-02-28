@@ -5,3 +5,133 @@
 {"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-26T12:23:47.000Z"}
 {"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-26T12:40:41.056Z"}
 {"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-26T12:41:35.455Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T01:06:40.937Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T01:08:01.048Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:09:19.477Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:09:30.017Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:09:37.207Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:09:46.035Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:09:47.804Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:09:48.814Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:09:49.941Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:09:51.176Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:09:52.582Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:11:41.082Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:11:50.663Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:12:01.520Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:18:42.629Z"}
+{"level":"warn","message":"Suspicious sign-up attempt: Email already exists - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:18:52.172Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T01:19:20.146Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:19:45.471Z"}
+{"level":"info","message":"Password changed - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:21:27.727Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T01:23:49.751Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:24:32.321Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:24:43.344Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:46:25.394Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:48:14.558Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:48:16.042Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:48:17.411Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:48:18.994Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:20.643Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:22.049Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:23.552Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:25.080Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:26.458Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:27.896Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:29.504Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:31.256Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:32.634Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:33.903Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:35.528Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:39.898Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:41.432Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:42.617Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:44.104Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:45.587Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:46.903Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:48.144Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:49.328Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:50.584Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:48:51.729Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:55:10.775Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:55:20.229Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T01:55:30.661Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:55:54.298Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:56:03.526Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:56:07.849Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:56:11.692Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T01:56:15.569Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:18.851Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:22.135Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:25.635Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:29.529Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:33.673Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:56:37.031Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T01:59:58.547Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:05.141Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:07.046Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:09.038Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:10.688Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:12.262Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:13.806Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:00:22.138Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:01:06.898Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:02:57.780Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:03:00.182Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:03:02.119Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:03:03.713Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:03:11.050Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:21.408Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:25.535Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:33.844Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:50.139Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:54.117Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:04:58.785Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:05:08.427Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:07:44.942Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:07:47.237Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:07:49.013Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T02:08:02.262Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:08:15.940Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:08:22.592Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:08:29.985Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:08:33.774Z"}
+{"level":"warn","message":"Failed login attempt: Incorrect password - Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:08:36.932Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:08:41.190Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:08:44.281Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:08:46.093Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:08:47.399Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:08:48.870Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:13:01.407Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:13:33.709Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:17:38.225Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:17:58.322Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:19:43.619Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:20:47.336Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:21:03.319Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:24:53.285Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:25:01.402Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:25:05.143Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:25:08.583Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:25:11.920Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:25:15.334Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:25:32.727Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:25:49.569Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:28:52.415Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:28:57.816Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:29:25.438Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:30:40.636Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:30:55.352Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:32:52.431Z"}
+{"level":"warn","message":"Login rate limit exceeded - IP: ::1, Path: /login","timestamp":"2025-02-28T02:33:20.408Z"}
+{"level":"info","message":"Server running on http://localhost:5000","timestamp":"2025-02-28T02:33:36.175Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:33:56.826Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:02.917Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:06.669Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:10.409Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:13.916Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:17.584Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:21.164Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:24.970Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:28.279Z"}
+{"level":"info","message":"Successful login - User ID: 1, Email: jonardpasilan@email.com, IP: ::1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36","timestamp":"2025-02-28T02:34:31.578Z"}

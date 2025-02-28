@@ -1,0 +1,14 @@
+.centered-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.centered-card ion-card {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}

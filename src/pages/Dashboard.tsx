@@ -1,6 +1,8 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
+import './Dashboard.css';
 
 const Dashboard: React.FC = () => {
   // Safely retrieve user data from localStorage
@@ -20,11 +22,25 @@ const Dashboard: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <h1>Welcome, {user.email}!</h1>
-        <p>You are now logged in.</p>
+        
+      <h1>Welcome, {user.email}!</h1>
+      <p>You are now logged in.</p>
+        <div className="centered-card">
+          <IonCard>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <IonCardHeader>
+              <IonCardTitle>Card Title</IonCardTitle>
+              <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+            </IonCardHeader>
+            <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+          </IonCard>
+        </div>
+
+
         <IonButton expand="full" onClick={handleLogout}>
           Logout
         </IonButton>
+
       </IonContent>
     </IonPage>
   );
